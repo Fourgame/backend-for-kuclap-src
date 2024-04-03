@@ -59,6 +59,7 @@ def create_comment():
         "comment" : data.get("comment"),
         "like" : data.get("like")
     }
+    "โค้ดดูเข้าใจง่ายดี เขียนอธิบายสถานะของcomment ไว้ด้วย"
     try:
         collection.insert_one(comment)
         return jsonify({"message": "Comment added successfully"}), 200
