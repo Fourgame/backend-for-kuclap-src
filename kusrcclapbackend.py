@@ -9,7 +9,7 @@ client = MongoClient(uri)
 db = client["ku_clap_src"] 
 collection = db["info_course"]
 login = db["login"]
-
+"เป็นการเชื่อม mongodb ที่เข้าใจง่าย ในอนาคตควรเพิ่ม update and delete "
 CORS(app)
 
 @app.route("/")
@@ -59,6 +59,7 @@ def create_comment():
         "comment" : data.get("comment"),
         "like" : data.get("like")
     }
+    "โค้ดดูเข้าใจง่ายดี เขียนอธิบายสถานะของcomment ไว้ด้วย"
     try:
         collection.insert_one(comment)
         return jsonify({"message": "Comment added successfully"}), 200
