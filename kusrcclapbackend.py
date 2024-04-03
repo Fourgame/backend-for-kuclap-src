@@ -9,7 +9,7 @@ client = MongoClient(uri)
 db = client["ku_clap_src"] 
 collection = db["info_course"]
 login = db["login"]
-
+"เป็นการเชื่อม mongodb ที่เข้าใจง่าย ในอนาคตควรเพิ่ม update and delete "
 CORS(app)
 
 @app.route("/")
