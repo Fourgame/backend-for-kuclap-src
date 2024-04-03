@@ -30,7 +30,7 @@ def get_all_comments():
         }
         comments_list.append(comments_data)
     return jsonify({"comments": comments_list})
-
+"โค้ดดีมากเลยเพื่อน "
 @app.route("/comments/<string:course_id>", methods=["GET"])
 def get_comments_by_course(course_id):
     comments = list(collection.find({"course": course_id}, {"_id": 0}))  
