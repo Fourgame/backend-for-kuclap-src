@@ -30,7 +30,7 @@ def get_all_comments():
         }
         comments_list.append(comments_data)
     return jsonify({"comments": comments_list})
-
+"โค้ดดีมากเลยเพื่อน "
 @app.route("/comments/<string:course_id>", methods=["GET"])
 def get_comments_by_course(course_id):
     comments = list(collection.find({"course": course_id}, {"_id": 0}))  
@@ -59,6 +59,7 @@ def create_comment():
         "comment" : data.get("comment"),
         "like" : data.get("like")
     }
+    "โค้ดดูเข้าใจง่ายดี เขียนอธิบายสถานะของcomment ไว้ด้วย"
     try:
         collection.insert_one(comment)
         return jsonify({"message": "Comment added successfully"}), 200
